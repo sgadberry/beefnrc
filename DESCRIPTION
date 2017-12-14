@@ -6,7 +6,9 @@ Author: Shane Gadberry
 Maintainer: Shane Gadberry <sgadberry@uaex.edu>
 Description: This package provides a method to generate nutrient requirement
     tables for beef cattle based on equations published in the NRC.
-License: What license is it under?
+License: GPLv3
 Encoding: UTF-8
+URL: http://github.com/sgadberry/beefnrc
+BugReports: http://github.com/sgadberry/beefnrc/issues
 LazyData: true
 RoxygenNote: 6.0.1
