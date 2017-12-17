@@ -22,7 +22,7 @@ in the table 19_1 data file.}
 months of age.}
 
 \item{target.adg}{Default is 2. This value should represent realistic rates of
-gain such as 0.5 as a low and 3.5 as a high.}
+gain such as 0.5 as a low and 3.2 as a high.}
 
 \item{from.bw.lbs}{Avoid using values < 400. This sets the minimum of the range
 for prediction.}
