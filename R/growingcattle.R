@@ -115,10 +115,10 @@ growing.cattle<-function(
     while(round(total.NEg.C[i],2) < re[i]){
       tdn.C[i]<-tdn.C[i]+0.01
       de.C[i]<-tdn.C[i]/100*4.409
-      me.C[i]<-de.C[i]*0.82
+      me.C[i]<-de.C[i]*0.82*ionophore.nema
       nema.C[i]<-1.37*me.C[i]-0.138*me.C[i]^2+0.0105*me.C[i]^3-1.12
       nega.C[i]<-1.42*me.C[i]-0.174*me.C[i]^2+0.0122*me.C[i]^3-1.65
-      start.x.C[i]<-nema.C[i]*ionophore.nema
+      start.x.C[i]<-nema.C[i]
       dmi.C[i]<-(current.mbbw.kg[i]*(0.2435*start.x.C[i]-0.0466*start.x.C[i]^2-0.1128)/start.x.C[i])*implant.dmi*ionophore.dmi
       ffm.C[i]<-total.NEm[i]/start.x.C[i]
       ffg.C[i]<-dmi.C[i]-ffm.C[i]
@@ -146,10 +146,10 @@ growing.cattle<-function(
     while(round(total.NEg.Y[i],2) < re[i]){
       tdn.Y[i]<-tdn.Y[i]+0.01
       de.Y[i]<-tdn.Y[i]/100*4.409
-      me.Y[i]<-de.Y[i]*0.82
+      me.Y[i]<-de.Y[i]*0.82*ionophore.nema
       nema.Y[i]<-1.37*me.Y[i]-0.138*me.Y[i]^2+0.0105*me.Y[i]^3-1.12
       nega.Y[i]<-1.42*me.Y[i]-0.174*me.Y[i]^2+0.0122*me.Y[i]^3-1.65
-      start.x.Y[i]<-nema.Y[i]*ionophore.nema
+      start.x.Y[i]<-nema.Y[i]
       dmi.Y[i]<-(current.mbbw.kg[i]*(0.2435*start.x.Y[i]-0.0466*start.x.Y[i]^2-0.0869)/start.x.Y[i])*implant.dmi*ionophore.dmi
       ffm.Y[i]<-total.NEm[i]/start.x.Y[i]
       ffg.Y[i]<-dmi.Y[i]-ffm.Y[i]
