@@ -183,6 +183,8 @@ bcs.gain.cow<-function(
   NEma<-ifelse(days.pregnant < 94, start.x093,start.x94)
   NEga<-ifelse(days.pregnant < 94, nega093,nega94)
   NE.intake<-dmi*NEma
+  dmi.NEm<-total.NEm/NEma
+  total.NEg<-(dmi-dmi.NEm)*NEga
   rbind(dmi,tdn,NEma,NE.intake,total.NEm)
 
   #protein totals
