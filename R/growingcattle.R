@@ -211,7 +211,9 @@ growing.cattle<-function(
   tdn.96<-ifelse(rep(isTRUE(yearling),times=bw.length),tdn.Y,tdn.C)
   NEma.96<-ifelse(rep(isTRUE(yearling),times=bw.length),nema.Y,nema.C)
   NEga.96<-ifelse(rep(isTRUE(yearling),times=bw.length),nega.Y,nega.C)
-  NE.intake.96<-dmi.96*NEma.96
+  dmi.NEm.96<-total.NEm/NEma.96
+  total.NEg.96<-(dmi.96-dmi.NEm.96)*NEga.96
+
 
   cat('Breed:',ifelse(code==1,'Angus',as.character(table19_1[table19_1[,1]==code,2])),"\n")
   cat('Mature BW, lbs:',mbw.lbs,"\n")
@@ -229,7 +231,7 @@ growing.cattle<-function(
   print(data.frame(Unshrunk.BW.lb=bw.range,
                    TDN.lb=round(tdn.96*dmi.96*2.2/100,2),
                    NEm.Mcal=total.NEm,
-                   NEg.Mcal=round(ifelse(isTRUE(yearling),total.NEg.Y,total.NEg.C),1),
+                   NEg.Mcal=round(total.NEg.96,1),
                    CP.lb=round(total.CP/454.54,2),
                    Ca.lb=round(ca.total/454.54,3),
                    P.lb=round(p.total/454.54,3)))
